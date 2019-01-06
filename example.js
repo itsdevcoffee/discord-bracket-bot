@@ -12,11 +12,11 @@ client.on('message', msg => {
   if (msg.content === '!test') {
     const embed = new Discord.RichEmbed()
       .setTitle('This is the title')
-      .setDescription('TEST')
+      .setDescription('This is the description field')
       // .addField('Field Name1', 'Field Value1', true)
       // .addField('Field Name2', 'Field Value2', true)
       // .addField('Field Name3', 'Field Value3', false)
-      .setAuthor('Tim Shenk', 'https://yt3.ggpht.com/a-/AAuE7mB_ZtzzecZx2QBPIL5mu-X_1V2M5g_qxmXO7Q=s288-mo-c-c0xffffffff-rj-k-no')
+      // .setAuthor('Tim Shenk', 'https://yt3.ggpht.com/a-/AAuE7mB_ZtzzecZx2QBPIL5mu-X_1V2M5g_qxmXO7Q=s288-mo-c-c0xffffffff-rj-k-no')
       .setColor('#f50057')
     msg.channel.send(embed);
   }
