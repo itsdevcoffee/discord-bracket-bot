@@ -4,7 +4,7 @@ const Bracket = require('./bracket.js');
 
 const client = new Discord.Client();
 
-const texMexBracket = new Bracket(['tim', 'ryan', 'jonathan'], client, 'test');
+const texMexBracket = new Bracket(['tim', 'ryan', 'jonathan', 'random', 'player1', 'player2', 'player3', 'player4', 'player5', 'player6', 'player7', 'player8', 'player9'], client, 'test');
 
 client.on('message', msg => {
   const viewStandings = () => {
@@ -45,17 +45,6 @@ client.on('message', msg => {
   if (msg.content === '!standings') {
     viewStandings();
   }
-
-  // if (msg.content === '!join') {
-  //   users.push(msg.author);
-  //   if (users.length === 8) {
-  //     const embed = new Discord.RichEmbed()
-  //       .setTitle('Bracket - Let\'s do this')
-  //       .setColor(333)
-  //       .setDescription(formatBracket(users));
-  //     msg.channel.send(embed);
-  //   }
-  // }
 
 });
 

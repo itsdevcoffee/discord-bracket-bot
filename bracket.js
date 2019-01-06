@@ -5,8 +5,6 @@ class Bracket {
     this.startingPlayers = players;
     this.bracket = [];
     this.bracketPlayers = [];
-    this.totalRounds = Math.ceil(Math.sqrt(players.length));
-    this.totalPlayers = Math.pow(2, this.totalRounds);
     this.currentRoundIdx = 0;
     this.isStarted = false;
     this.isFinished = false;
@@ -39,7 +37,10 @@ class Bracket {
 
   initBracket() {
     // Fills bracketPlayers with bye rounds and shuffles the bracket
+    this.totalRounds = Math.ceil(Math.sqrt(this.startingPlayers.length));
+    this.totalPlayers = Math.pow(2, this.totalRounds);
     const totalBye = this.totalPlayers - this.startingPlayers.length;
+    console.log(totalBye, this.totalPlayers, this.startingPlayers.length);
     if (totalBye !== 0) {
       const byePlayers = Array(totalBye).fill('BYE');
       this.bracketPlayers = this.shuffle([...byePlayers, ...this.startingPlayers]);
