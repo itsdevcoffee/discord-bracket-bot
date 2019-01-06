@@ -10,13 +10,14 @@ const client = new Discord.Client();
 
 client.on('message', msg => {
   if (msg.content === '!test') {
+    msg.channel.send('https://www.youtube.com/channel/UCqr-7GDVTsdNBCeufvERYuw');
     const embed = new Discord.RichEmbed()
-      .setTitle('This is the title')
-      .setDescription('This is the description field')
+      // .setTitle('This is the title').
+      // .setDescription('This is the description field')
       // .addField('Field Name1', 'Field Value1', true)
       // .addField('Field Name2', 'Field Value2', true)
       // .addField('Field Name3', 'Field Value3', false)
-      // .setAuthor('Tim Shenk', 'https://yt3.ggpht.com/a-/AAuE7mB_ZtzzecZx2QBPIL5mu-X_1V2M5g_qxmXO7Q=s288-mo-c-c0xffffffff-rj-k-no')
+      .setAuthor('Tim Shenk', 'https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-1/p160x160/11226559_10153351803422980_5095261185894120077_n.jpg?_nc_cat=109&_nc_ht=scontent-dfw5-1.xx&oh=2368eb2c0f78f1df41962741df62e0a7&oe=5CD94B38')
       .setColor('#f50057')
     msg.channel.send(embed);
   }
