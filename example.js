@@ -10,7 +10,7 @@ const client = new Discord.Client();
 
 client.on('message', msg => {
   if (msg.content === '!test') {
-    msg.channel.send('https://www.youtube.com/channel/UCqr-7GDVTsdNBCeufvERYuw');
+    msg.channel.send('https://www.youtube.com/c/devcoffee');
     const embed = new Discord.RichEmbed()
       // .setTitle('This is the title').
       // .setDescription('This is the description field')
